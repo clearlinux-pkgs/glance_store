@@ -59,7 +59,6 @@ Pygments
 docutils-python
 Jinja2
 PyYAML-python
-suds-python
 urllib3-python
 futures-python
 markupsafe-python

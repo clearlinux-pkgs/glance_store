@@ -4,7 +4,7 @@
 #
 Name     : glance_store
 Version  : 0.9.1
-Release  : 20
+Release  : 21
 URL      : http://tarballs.openstack.org/glance_store/glance_store-0.9.1.tar.gz
 Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.9.1.tar.gz
 Summary  : OpenStack Image Service Store Library
@@ -78,7 +78,6 @@ BuildRequires : simplejson
 BuildRequires : six
 BuildRequires : six-python
 BuildRequires : stevedore
-BuildRequires : suds-python
 BuildRequires : testrepository-python
 BuildRequires : testscenarios
 BuildRequires : testtools

@@ -62,3 +62,4 @@ PyYAML-python
 urllib3-python
 futures-python
 markupsafe-python
+suds-jurko

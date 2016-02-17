@@ -1,6 +1,53 @@
 CHANGES
 =======
 
+0.11.0
+------
+
+* Remove unused parameters from swift connection init
+* Sheepdog: fix image-download failure
+* LOG.warn is deprecated in python3
+* Updated from global requirements
+* Updated from global requirements
+* Use url_for from keystoneclient in swift store
+* Remove deprecated datastore_name, datacenter_path
+* Add backend tests from glance
+* Fix some inconsistency in docstrings
+* Updated from global requirements
+* Change Swift zero-size chunk behaviour
+* Sheepdog: fix upload failure in API v2
+* Remove unnecessary re-raise of NotFound exception
+* Updated from global requirements
+* Add signature verifier to backend drivers
+* Use oslo_utils.encodeutils.exception_to_unicode()
+* Fix default mutables for set_acls
+* Deprecate unused Exceptions
+* Remove unnecessary auth module
+* Updated from global requirements
+* Deprecate the S3 driver
+* Document supported drivers and maintainers
+* Remove the gridfs driver
+* Set documented default directory for filesystem
+* Imported Translations from Zanata
+* Updated from global requirements
+* Swift store: do not send a 0 byte chunk
+* Store.get_size: handle HTTPException
+* Replace deprecated library function os.popen() with subprocess
+* Updated from global requirements
+* Deprecated tox -downloadcache option removed
+* Add docs section to tox.ini
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Updated from global requirements
+* Remove duplicate keys from dictionary
+* Remove unreachable code
+* Sheepdog: Change storelocation format
+* Updated from global requirements
+* Add reno for release notes management in glance_store
+* Put py34 first in the env order of tox
+* Updated from global requirements
+* Add list of supported stores to help
+* Add functional testing devstack gate hooks
+
 0.10.0
 ------
 
@@ -36,6 +83,7 @@ CHANGES
 * Imported Translations from Transifex
 * Add proxy support to S3 Store
 * Prevent glance-api hangups during connection to rbd
+* rbd driver cannot delete residual image from ceph in some cases
 
 0.8.0
 -----

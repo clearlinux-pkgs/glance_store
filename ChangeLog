@@ -1,9 +1,31 @@
 CHANGES
 =======
 
+0.13.0
+------
+
+* Add https ca_file and insecure options to VMware Store
+* swift: Do not search storage_url for ks v2
+
+0.12.0
+------
+
+* Fix misspelling in the releasenote support-cinder-upload
+* Add new config options for HTTPS store
+* Implement get, add and delete for cinder store
+* Implement re-authentication for swift driver
+* Implement swift store connection manager
+* Updated from global requirements
+* test_http_get_redirect is not testing redirects correctly
+* Switch VMWare Datastore to use Requests
+* Updated from global requirements
+* Add small image verifier for swift backend
+* Switch HTTP store to using requests
+
 0.11.0
 ------
 
+* Change approach to request storage url for multi-tenant store
 * Remove unused parameters from swift connection init
 * Sheepdog: fix image-download failure
 * LOG.warn is deprecated in python3

@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+0.13.1
+------
+
+* Update .gitreview for stable/mitaka
+* Mock swiftclient's functions in tests
+
 0.13.0
 ------
 

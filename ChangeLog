@@ -1,11 +1,52 @@
 CHANGES
 =======
 
-0.13.1
+0.14.0
 ------
 
-* Update .gitreview for stable/mitaka
+* Add bandit to pep8 and bandit testenv
+* Remove unused variable in vmware store
+* Imported Translations from Zanata
+* Updated from global requirements
+* Check that size is a number
+* Replace dict.iterkeys with six.iterkeys to make PY3 compatible
+* cinder: Fix get_size return value
+* The function add calculation size_gb need improve
+* Updated from global requirements
+* Updated from global requirements
+* Fix argument order for assertEqual to (expected, observed)
+* Updated from global requirements
+* Updated from global requirements
+* Remove -c from tox.ini
+* tox respects upper-constraints.txt
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix minor misspellings affecting Config Reference Guide
+* Remove verbose option from glance_store tests
+* Updated from global requirements
+* Updated from global requirements
+* Improve help text of swift driver opts
+* Updated from global requirements
+* Add functional tests for swift
+* Imported Translations from Zanata
+* Updated from global requirements
+* Updated from global requirements
+* Fix releasenotes to pass reno gates
+* Updated from global requirements
+* tox: use os-testr instead of testr
+* Fix swiftclient mocks
+* Deprecate swift driver options properly
+* Fix typos in config files
+* Setup defaults for swift driver authentication
+* Fix doc generation warnings and errors
+* trivial:fixing one W503 pep8 error
+* Module docs are not generated
+* Fix cinder store to support Cinder RemoteFS backends
+* Missing params in store_add_to_backend docstring
 * Mock swiftclient's functions in tests
+* Update reno for stable/mitaka
 
 0.13.0
 ------
@@ -25,6 +66,7 @@ CHANGES
 * test_http_get_redirect is not testing redirects correctly
 * Switch VMWare Datastore to use Requests
 * Updated from global requirements
+* Add base for functional tests
 * Add small image verifier for swift backend
 * Switch HTTP store to using requests
 
@@ -38,7 +80,7 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Use url_for from keystoneclient in swift store
-* Remove deprecated datastore_name, datacenter_path
+* Remove deprecated  datastore_name, datacenter_path
 * Add backend tests from glance
 * Fix some inconsistency in docstrings
 * Updated from global requirements
@@ -105,7 +147,7 @@ CHANGES
 0.9.0
 -----
 
-* Release notes 0.9.0 and corrected library version
+*  Release notes 0.9.0 and corrected library version
 * Updated from global requirements
 * Catch InvalidURL when requesting store size
 * Imported Translations from Transifex

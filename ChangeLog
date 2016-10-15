@@ -1,12 +1,58 @@
 CHANGES
 =======
 
+0.18.0
+------
+
+* Fix header passed to requests
+* Updated from global requirements
+
+0.17.0
+------
+
+* Add release notes for 0.17.0
+* Release note for glance_store configuration opts
+* Improving help text for Swift store opts
+* Improving help text for Swift store util opts
+* Improve help text of cinder driver opts
+* Fix help text of swift_store_config_file
+* Improving help text for backend store opts
+* Remove "Services which consume this" section
+* Improve the help text for Swift driver opts
+* Updated from global requirements
+* Improving help text for Sheepdog opts
+* Use constraints for all tox environments
+* Improve help text of http driver opts
+* Improve help text of filesystem store opts
+* Improve help text of rbd driver opts
+* Improving help text for Glance store Swift  opts
+* Remove deprecated exceptions
+* Improve the help text for vmware datastore driver opts
+* Updated from global requirements
+
+0.16.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Remove S3 driver
+
+0.15.0
+------
+
+* Fix cinder config string as per current i18n state
+* Sheepdog:modify default addr
+* Cleanup i18n marker functions to match Oslo usage
+* Updated from global requirements
+* Don't include openstack/common in flake8 exclude list
+
 0.14.0
 ------
 
 * Add bandit to pep8 and bandit testenv
 * Remove unused variable in vmware store
 * Imported Translations from Zanata
+* Split functional tests apart
 * Updated from global requirements
 * Check that size is a number
 * Replace dict.iterkeys with six.iterkeys to make PY3 compatible

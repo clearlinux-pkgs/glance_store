@@ -4,7 +4,7 @@
 #
 Name     : glance_store
 Version  : 0.18.0
-Release  : 35
+Release  : 36
 URL      : http://tarballs.openstack.org/glance_store/glance_store-0.18.0.tar.gz
 Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.18.0.tar.gz
 Summary  : OpenStack Image Service Store Library
@@ -32,6 +32,7 @@ BuildRequires : futures-python
 BuildRequires : greenlet-python
 BuildRequires : hacking
 BuildRequires : httplib2
+BuildRequires : imagesize-python
 BuildRequires : iso8601-python
 BuildRequires : jsonschema-python
 BuildRequires : linecache2-python
@@ -49,6 +50,7 @@ BuildRequires : oslo.i18n-python
 BuildRequires : oslo.serialization-python
 BuildRequires : oslo.utils-python
 BuildRequires : oslo.vmware-python
+BuildRequires : oslo_privsep-python
 BuildRequires : oslosphinx-python
 BuildRequires : oslotest-python
 BuildRequires : pbr
@@ -59,6 +61,7 @@ BuildRequires : posix_ipc
 BuildRequires : prettytable
 BuildRequires : py-python
 BuildRequires : pyflakes-python
+BuildRequires : pyparsing-python
 BuildRequires : pytest
 BuildRequires : python-cinderclient-python
 BuildRequires : python-dev

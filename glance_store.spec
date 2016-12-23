@@ -4,7 +4,7 @@
 #
 Name     : glance_store
 Version  : 0.18.0
-Release  : 34
+Release  : 35
 URL      : http://tarballs.openstack.org/glance_store/glance_store-0.18.0.tar.gz
 Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.18.0.tar.gz
 Summary  : OpenStack Image Service Store Library

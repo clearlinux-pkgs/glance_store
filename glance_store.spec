@@ -6,7 +6,7 @@
 #
 Name     : glance_store
 Version  : 0.18.0
-Release  : 38
+Release  : 39
 URL      : http://tarballs.openstack.org/glance_store/glance_store-0.18.0.tar.gz
 Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.18.0.tar.gz
 Source99 : http://tarballs.openstack.org/glance_store/glance_store-0.18.0.tar.gz.asc
@@ -15,6 +15,25 @@ Group    : Development/Tools
 License  : Apache-2.0
 Requires: glance_store-bin
 Requires: glance_store-python
+Requires: debtcollector
+Requires: enum34
+Requires: eventlet
+Requires: httplib2
+Requires: jsonschema
+Requires: os-brick
+Requires: oslo.concurrency
+Requires: oslo.config
+Requires: oslo.i18n
+Requires: oslo.rootwrap
+Requires: oslo.serialization
+Requires: oslo.utils
+Requires: oslo.vmware
+Requires: python-cinderclient
+Requires: python-keystoneclient
+Requires: python-swiftclient
+Requires: requests
+Requires: six
+Requires: stevedore
 BuildRequires : Babel-python
 BuildRequires : Jinja2
 BuildRequires : PyYAML-python
@@ -31,11 +50,11 @@ BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : fixtures-python
 BuildRequires : flake8-python
+BuildRequires : functools32-python
 BuildRequires : futures-python
 BuildRequires : greenlet-python
 BuildRequires : hacking
 BuildRequires : httplib2
-BuildRequires : imagesize-python
 BuildRequires : iso8601-python
 BuildRequires : jsonschema-python
 BuildRequires : linecache2-python
@@ -113,22 +132,6 @@ bin components for the glance_store package.
 %package python
 Summary: python components for the glance_store package.
 Group: Default
-Requires: enum34-python
-Requires: eventlet-python
-Requires: httplib2
-Requires: jsonschema-python
-Requires: oslo.concurrency-python
-Requires: oslo.config
-Requires: oslo.i18n-python
-Requires: oslo.serialization-python
-Requires: oslo.utils-python
-Requires: oslo.vmware-python
-Requires: python-cinderclient-python
-Requires: python-keystoneclient-python
-Requires: python-swiftclient-python
-Requires: requests-python
-Requires: six-python
-Requires: stevedore
 
 %description python
 python components for the glance_store package.
@@ -139,7 +142,7 @@ python components for the glance_store package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1484548331
+export SOURCE_DATE_EPOCH=1489027475
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -149,7 +152,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1484548331
+export SOURCE_DATE_EPOCH=1489027475
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

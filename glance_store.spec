@@ -6,7 +6,7 @@
 #
 Name     : glance_store
 Version  : 0.18.0
-Release  : 40
+Release  : 41
 URL      : http://tarballs.openstack.org/glance_store/glance_store-0.18.0.tar.gz
 Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.18.0.tar.gz
 Source99 : http://tarballs.openstack.org/glance_store/glance_store-0.18.0.tar.gz.asc
@@ -35,18 +35,11 @@ Requires: requests
 Requires: six
 Requires: stevedore
 BuildRequires : configparser-python
-BuildRequires : oslo.config
-BuildRequires : oslo_utils-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pytest
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : tox
-BuildRequires : virtualenv
 
 %description
 Glance Store Library
@@ -78,17 +71,12 @@ python components for the glance_store package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489281085
+export SOURCE_DATE_EPOCH=1489281518
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1489281085
+export SOURCE_DATE_EPOCH=1489281518
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

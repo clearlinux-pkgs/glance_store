@@ -1,6 +1,48 @@
 CHANGES
 =======
 
+0.20.0
+------
+
+* Updated from global requirements
+
+0.19.0
+------
+
+* Raise exc when using multi-tenant and swift+config
+* Updated from global requirements
+* Use storage_url in DB for multi-tenant swift store
+* Add alt text for badges
+* Fix a typo in help text
+* Show team and repo badges on README
+* take into consideration created volume size in cinder backend
+* Updated from global requirements
+* Move rootwrap config files from etc/* into etc/glance/*
+* Update README
+* Convert to keystoneauth
+* Updated from global requirements
+* Fix a typo in rootwrap.conf and glance_cinder_store.filters
+* Fix dbg msg when swift can't determine image size
+* Refactor get_manager_for_store in an OO manner
+* Add cinder_volume_type to cinder store configuration
+* Enable release notes translation
+* Updated from global requirements
+* Do not require entry-point dependencies in tests
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Update home-page url in setup.cfg
+* Do not call image.stat() when we only need the size
+* TrivialFix: Merge imports in code
+* standardize release note page ordering
+* Clean imports in code
+* Reason to return sorted list of drivers for opts
+* Updated from global requirements
+* Always return a sorted list of drivers for configs
+* Fix doc build if git is absent
+* Improve tools/tox_install.sh
+* Update reno for stable/newton
+
 0.18.0
 ------
 

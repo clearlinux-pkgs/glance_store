@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xC36CDCB4DF00C68C (infra-root@openstack.org)
 #
 Name     : glance_store
-Version  : 0.26.0
-Release  : 44
-URL      : http://tarballs.openstack.org/glance_store/glance_store-0.26.0.tar.gz
-Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.26.0.tar.gz
-Source99 : http://tarballs.openstack.org/glance_store/glance_store-0.26.0.tar.gz.asc
+Version  : 0.26.1
+Release  : 45
+URL      : http://tarballs.openstack.org/glance_store/glance_store-0.26.1.tar.gz
+Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.26.1.tar.gz
+Source99 : http://tarballs.openstack.org/glance_store/glance_store-0.26.1.tar.gz.asc
 Summary  : OpenStack Image Service Store Library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -53,9 +53,6 @@ Requires: testscenarios
 Requires: testtools
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python3-dev
-BuildRequires : setuptools
 
 %description
 Team and repository tags
@@ -97,14 +94,14 @@ python3 components for the glance_store package.
 
 
 %prep
-%setup -q -n glance_store-0.26.0
+%setup -q -n glance_store-0.26.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532379699
+export SOURCE_DATE_EPOCH=1533088462
 python3 setup.py build -b py3
 
 %install

@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+0.26.1
+------
+
+* Wrap interface function for multihash correctly
+* Add release note for glance\_store bugfix release
+* Update UPPER\_CONSTRAINTS\_FILE for stable/rocky
+* Update .gitreview for stable/rocky
+
 0.26.0
 ------
 

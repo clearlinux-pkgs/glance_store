@@ -1,13 +1,23 @@
 CHANGES
 =======
 
-0.26.1
+0.27.0
 ------
 
+* Add statement explaining "tips" job configuration
+* Provision to add new config options in sample config file
+* Imported Translations from Zanata
+* add lib-forward-testing-python3 test job
+* add python 3.6 unit test job
+* switch documentation job to new PTI
+* import zuul job settings from project-config
+* Refactor periodic "tips" jobs
+* Imported Translations from Zanata
+* Move doc8 to test requirements
+* Remove team diversity tags note in README
 * Wrap interface function for multihash correctly
-* Add release note for glance\_store bugfix release
-* Update UPPER\_CONSTRAINTS\_FILE for stable/rocky
-* Update .gitreview for stable/rocky
+* cinder: Support os-brick privsep filters
+* Update reno for stable/rocky
 
 0.26.0
 ------

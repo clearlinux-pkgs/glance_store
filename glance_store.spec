@@ -6,7 +6,7 @@
 #
 Name     : glance_store
 Version  : 0.27.0
-Release  : 48
+Release  : 49
 URL      : http://tarballs.openstack.org/glance_store/glance_store-0.27.0.tar.gz
 Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.27.0.tar.gz
 Source99 : http://tarballs.openstack.org/glance_store/glance_store-0.27.0.tar.gz.asc
@@ -17,13 +17,11 @@ Requires: glance_store-bin = %{version}-%{release}
 Requires: glance_store-license = %{version}-%{release}
 Requires: glance_store-python = %{version}-%{release}
 Requires: glance_store-python3 = %{version}-%{release}
-Requires: Sphinx
 Requires: enum34
 Requires: eventlet
 Requires: httplib2
 Requires: jsonschema
 Requires: keystoneauth1
-Requires: openstackdocstheme
 Requires: os-brick
 Requires: oslo.concurrency
 Requires: oslo.config
@@ -35,17 +33,27 @@ Requires: oslo.utils
 Requires: python-cinderclient
 Requires: python-keystoneclient
 Requires: python-swiftclient
-Requires: reno
 Requires: requests
 Requires: six
-Requires: sphinxcontrib-apidoc
 Requires: stevedore
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 
 %description
+========================
 Team and repository tags
-        ========================
+========================
+.. image:: https://governance.openstack.org/tc/badges/glance_store.svg
+:target: https://governance.openstack.org/tc/reference/tags/index.html
+:alt: The following tags have been asserted for the Glance Store
+Library:
+"project:official",
+"stable:follows-policy",
+"vulnerability:managed".
+Follow the link for an explanation of these tags.
+.. NOTE(rosmaita): the alt text above will have to be updated when
+additional tags are asserted for glance_store.  (The SVG in the
+governance repo is updated automatically.)
 
 %package bin
 Summary: bin components for the glance_store package.
@@ -90,7 +98,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541266327
+export SOURCE_DATE_EPOCH=1551029720
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install

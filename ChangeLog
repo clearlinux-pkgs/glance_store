@@ -1,6 +1,22 @@
 CHANGES
 =======
 
+0.28.0
+------
+
+* Stein cycle Release Notes
+* Filesystem driver: add chunk size config option
+* Fix python3 compatibility of rbd get\_fsid
+* Do not raise StopIteration
+* add python 3.7 unit test job
+* Fix some types in the FS and VMware drivers
+* Imported Translations from Zanata
+* Update mailinglist from dev to discuss
+* Use template for lower-constraints
+* Update deprecation notices
+* Catch rbd NoSpace exception
+* Remove moxstubout usage
+
 0.27.0
 ------
 
@@ -10,6 +26,7 @@ CHANGES
 * add lib-forward-testing-python3 test job
 * add python 3.6 unit test job
 * switch documentation job to new PTI
+* Fix defaults for ConfigParser
 * import zuul job settings from project-config
 * Refactor periodic "tips" jobs
 * Imported Translations from Zanata

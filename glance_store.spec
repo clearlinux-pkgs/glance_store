@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : glance_store
-Version  : 0.28.0
-Release  : 51
-URL      : http://tarballs.openstack.org/glance_store/glance_store-0.28.0.tar.gz
-Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.28.0.tar.gz
-Source99 : http://tarballs.openstack.org/glance_store/glance_store-0.28.0.tar.gz.asc
+Version  : 0.29.0
+Release  : 52
+URL      : http://tarballs.openstack.org/glance_store/glance_store-0.29.0.tar.gz
+Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.29.0.tar.gz
+Source99 : http://tarballs.openstack.org/glance_store/glance_store-0.29.0.tar.gz.asc
 Summary  : OpenStack Image Service Store Library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -37,7 +37,26 @@ Requires: requests
 Requires: six
 Requires: stevedore
 BuildRequires : buildreq-distutils3
+BuildRequires : enum34
+BuildRequires : eventlet
+BuildRequires : httplib2
+BuildRequires : jsonschema
+BuildRequires : keystoneauth1
+BuildRequires : os-brick
+BuildRequires : oslo.concurrency
+BuildRequires : oslo.config
+BuildRequires : oslo.i18n
+BuildRequires : oslo.privsep
+BuildRequires : oslo.rootwrap
+BuildRequires : oslo.serialization
+BuildRequires : oslo.utils
 BuildRequires : pbr
+BuildRequires : python-cinderclient
+BuildRequires : python-keystoneclient
+BuildRequires : python-swiftclient
+BuildRequires : requests
+BuildRequires : six
+BuildRequires : stevedore
 
 %description
 ========================
@@ -91,18 +110,26 @@ python3 components for the glance_store package.
 
 
 %prep
-%setup -q -n glance_store-0.28.0
+%setup -q -n glance_store-0.29.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551399974
+export SOURCE_DATE_EPOCH=1559880949
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/glance_store
 cp LICENSE %{buildroot}/usr/share/package-licenses/glance_store/LICENSE

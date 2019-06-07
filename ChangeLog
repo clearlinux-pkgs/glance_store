@@ -1,10 +1,32 @@
 CHANGES
 =======
 
+0.29.0
+------
+
+* Rethinking file system access
+* Change location metadata key 'backend' to 'store'
+* Add location prefix url to store instance
+* Add releasenote for option removal
+* Removed 'store\_capabilities\_update\_min\_interval' config option
+* Dropping the py35 testing
+* Modify deprecation warning for stores options
+* Replace git.openstack.org URLs with opendev.org URLs
+* Fix failing tips-py35 jobs
+* OpenDev Migration Patch
+* Do not include ETag when puting manifest in chunked uploads
+* Update irrelevant-files for tempest tests
+* Python3: Fix return type on CooperativeReader.read
+* Uncap jsonschema
+* Update master for stable/stein
+* Prevent unicode object error from zero-byte read
+* Return bytes even when get()ing a zero-byte image from swift
+
 0.28.0
 ------
 
 * Stein cycle Release Notes
+* Update help text for rbd\_ceph\_conf
 * Filesystem driver: add chunk size config option
 * Fix python3 compatibility of rbd get\_fsid
 * Do not raise StopIteration
@@ -27,7 +49,9 @@ CHANGES
 * add python 3.6 unit test job
 * switch documentation job to new PTI
 * Fix defaults for ConfigParser
+* Change rbd default conf path
 * import zuul job settings from project-config
+* remove bandit from testing
 * Refactor periodic "tips" jobs
 * Imported Translations from Zanata
 * Move doc8 to test requirements

@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+0.29.1
+------
+
+* Add 0.29.1 releasenotes
+* Revert "Change location metadata key 'backend' to 'store'"
+
 0.29.0
 ------
 

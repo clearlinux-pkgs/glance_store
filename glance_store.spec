@@ -6,7 +6,7 @@
 #
 Name     : glance_store
 Version  : 0.29.1
-Release  : 53
+Release  : 54
 URL      : http://tarballs.openstack.org/glance_store/glance_store-0.29.1.tar.gz
 Source0  : http://tarballs.openstack.org/glance_store/glance_store-0.29.1.tar.gz
 Source99 : http://tarballs.openstack.org/glance_store/glance_store-0.29.1.tar.gz.asc

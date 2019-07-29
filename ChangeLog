@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+1.0.0
+-----
+
+* Release note and documentation for 1.0.0
+* Deprecate Sheepdog driver
+* Change location metadata key 'backend' to 'store'
+* Remove sheepdog tests from zuul config
+* Add Python 3 Train unit tests
+
 0.29.1
 ------
 
@@ -11,6 +20,7 @@ CHANGES
 ------
 
 * Rethinking file system access
+* Remove outdated line in tox.ini
 * Change location metadata key 'backend' to 'store'
 * Add location prefix url to store instance
 * Add releasenote for option removal

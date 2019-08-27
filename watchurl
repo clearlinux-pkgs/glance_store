@@ -1,3 +1,0 @@
-# openstack Liberty needs version >= 0.7.1 != 0.9.0
-# for more information check https://github.com/openstack/requirements/blob/master/global-requirements.txt
-watchurl=http://tarballs.openstack.org/glance_store/glance_store-([\d.]*).tar.gz

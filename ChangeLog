@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+1.0.1
+-----
+
+* Release note for 1.0.1
+* Register reserved store configs
+* Remove warning filter
+* Update TOX/UPPER\_CONSTRAINTS\_FILE for stable/train
+* Update .gitreview for stable/train
+
 1.0.0
 -----
 

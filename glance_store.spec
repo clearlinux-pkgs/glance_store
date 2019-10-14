@@ -6,7 +6,7 @@
 #
 Name     : glance_store
 Version  : 1.0.1
-Release  : 56
+Release  : 57
 URL      : http://tarballs.openstack.org/glance_store/glance_store-1.0.1.tar.gz
 Source0  : http://tarballs.openstack.org/glance_store/glance_store-1.0.1.tar.gz
 Source1 : http://tarballs.openstack.org/glance_store/glance_store-1.0.1.tar.gz.asc
@@ -17,7 +17,6 @@ Requires: glance_store-bin = %{version}-%{release}
 Requires: glance_store-license = %{version}-%{release}
 Requires: glance_store-python = %{version}-%{release}
 Requires: glance_store-python3 = %{version}-%{release}
-Requires: enum34
 Requires: eventlet
 Requires: httplib2
 Requires: jsonschema
@@ -37,7 +36,6 @@ Requires: requests
 Requires: six
 Requires: stevedore
 BuildRequires : buildreq-distutils3
-BuildRequires : enum34
 BuildRequires : eventlet
 BuildRequires : httplib2
 BuildRequires : jsonschema
@@ -59,20 +57,8 @@ BuildRequires : six
 BuildRequires : stevedore
 
 %description
-========================
 Team and repository tags
-========================
-.. image:: https://governance.openstack.org/tc/badges/glance_store.svg
-:target: https://governance.openstack.org/tc/reference/tags/index.html
-:alt: The following tags have been asserted for the Glance Store
-Library:
-"project:official",
-"stable:follows-policy",
-"vulnerability:managed".
-Follow the link for an explanation of these tags.
-.. NOTE(rosmaita): the alt text above will have to be updated when
-additional tags are asserted for glance_store.  (The SVG in the
-governance repo is updated automatically.)
+        ========================
 
 %package bin
 Summary: bin components for the glance_store package.
@@ -117,8 +103,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569900676
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1571079480
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -134,7 +119,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/glance_store
-cp LICENSE %{buildroot}/usr/share/package-licenses/glance_store/LICENSE
+cp %{_builddir}/glance_store-1.0.1/LICENSE %{buildroot}/usr/share/package-licenses/glance_store/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -149,7 +134,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/glance_store/LICENSE
+/usr/share/package-licenses/glance_store/294b43b2cec9919063be1a3b49e8722648424779
 
 %files python
 %defattr(-,root,root,-)

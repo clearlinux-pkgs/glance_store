@@ -1,14 +1,16 @@
 CHANGES
 =======
 
-1.0.1
+1.1.0
 -----
 
+* Remove sheepdog store driver
+* Add release notes link in readme
+* Imported Translations from Zanata
 * Release note for 1.0.1
+* Update master for stable/train
 * Register reserved store configs
 * Remove warning filter
-* Update TOX/UPPER\_CONSTRAINTS\_FILE for stable/train
-* Update .gitreview for stable/train
 
 1.0.0
 -----
@@ -36,6 +38,7 @@ CHANGES
 * Removed 'store\_capabilities\_update\_min\_interval' config option
 * Dropping the py35 testing
 * Modify deprecation warning for stores options
+* Cap sphinx for py2 to match global requirements
 * Replace git.openstack.org URLs with opendev.org URLs
 * Fix failing tips-py35 jobs
 * OpenDev Migration Patch

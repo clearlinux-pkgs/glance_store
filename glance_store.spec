@@ -6,7 +6,7 @@
 #
 Name     : glance_store
 Version  : 1.1.0
-Release  : 60
+Release  : 61
 URL      : http://tarballs.openstack.org/glance_store/glance_store-1.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/glance_store/glance_store-1.1.0.tar.gz
 Source1  : http://tarballs.openstack.org/glance_store/glance_store-1.1.0.tar.gz.asc
@@ -102,6 +102,7 @@ python components for the glance_store package.
 Summary: python3 components for the glance_store package.
 Group: Default
 Requires: python3-core
+Provides: pypi(glance-store)
 
 %description python3
 python3 components for the glance_store package.
@@ -116,7 +117,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1577137321
+export SOURCE_DATE_EPOCH=1582930553
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar

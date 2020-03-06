@@ -6,7 +6,7 @@
 #
 Name     : glance_store
 Version  : 1.1.0
-Release  : 61
+Release  : 62
 URL      : http://tarballs.openstack.org/glance_store/glance_store-1.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/glance_store/glance_store-1.1.0.tar.gz
 Source1  : http://tarballs.openstack.org/glance_store/glance_store-1.1.0.tar.gz.asc
@@ -57,20 +57,8 @@ BuildRequires : six
 BuildRequires : stevedore
 
 %description
-========================
 Team and repository tags
-========================
-.. image:: https://governance.openstack.org/tc/badges/glance_store.svg
-:target: https://governance.openstack.org/tc/reference/tags/index.html
-:alt: The following tags have been asserted for the Glance Store
-Library:
-"project:official",
-"stable:follows-policy",
-"vulnerability:managed".
-Follow the link for an explanation of these tags.
-.. NOTE(rosmaita): the alt text above will have to be updated when
-additional tags are asserted for glance_store.  (The SVG in the
-governance repo is updated automatically.)
+        ========================
 
 %package bin
 Summary: bin components for the glance_store package.
@@ -102,7 +90,19 @@ python components for the glance_store package.
 Summary: python3 components for the glance_store package.
 Group: Default
 Requires: python3-core
-Provides: pypi(glance-store)
+Provides: pypi(glance_store)
+Requires: pypi(eventlet)
+Requires: pypi(jsonschema)
+Requires: pypi(keystoneauth1)
+Requires: pypi(oslo.concurrency)
+Requires: pypi(oslo.config)
+Requires: pypi(oslo.i18n)
+Requires: pypi(oslo.serialization)
+Requires: pypi(oslo.utils)
+Requires: pypi(python_keystoneclient)
+Requires: pypi(requests)
+Requires: pypi(six)
+Requires: pypi(stevedore)
 
 %description python3
 python3 components for the glance_store package.
@@ -117,8 +117,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582930553
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583535146
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

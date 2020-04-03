@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : glance_store
-Version  : 1.1.0
-Release  : 62
-URL      : http://tarballs.openstack.org/glance_store/glance_store-1.1.0.tar.gz
-Source0  : http://tarballs.openstack.org/glance_store/glance_store-1.1.0.tar.gz
-Source1  : http://tarballs.openstack.org/glance_store/glance_store-1.1.0.tar.gz.asc
+Version  : 2.0.0
+Release  : 63
+URL      : http://tarballs.openstack.org/glance_store/glance_store-2.0.0.tar.gz
+Source0  : http://tarballs.openstack.org/glance_store/glance_store-2.0.0.tar.gz
+Source1  : http://tarballs.openstack.org/glance_store/glance_store-2.0.0.tar.gz.asc
 Summary  : OpenStack Image Service Store Library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -17,6 +17,7 @@ Requires: glance_store-bin = %{version}-%{release}
 Requires: glance_store-license = %{version}-%{release}
 Requires: glance_store-python = %{version}-%{release}
 Requires: glance_store-python3 = %{version}-%{release}
+Requires: boto3
 Requires: eventlet
 Requires: httplib2
 Requires: jsonschema
@@ -35,6 +36,7 @@ Requires: python-swiftclient
 Requires: requests
 Requires: six
 Requires: stevedore
+BuildRequires : boto3
 BuildRequires : buildreq-distutils3
 BuildRequires : eventlet
 BuildRequires : httplib2
@@ -57,8 +59,20 @@ BuildRequires : six
 BuildRequires : stevedore
 
 %description
+========================
 Team and repository tags
-        ========================
+========================
+.. image:: https://governance.openstack.org/tc/badges/glance_store.svg
+:target: https://governance.openstack.org/tc/reference/tags/index.html
+:alt: The following tags have been asserted for the Glance Store
+Library:
+"project:official",
+"stable:follows-policy",
+"vulnerability:managed".
+Follow the link for an explanation of these tags.
+.. NOTE(rosmaita): the alt text above will have to be updated when
+additional tags are asserted for glance_store.  (The SVG in the
+governance repo is updated automatically.)
 
 %package bin
 Summary: bin components for the glance_store package.
@@ -91,33 +105,34 @@ Summary: python3 components for the glance_store package.
 Group: Default
 Requires: python3-core
 Provides: pypi(glance_store)
-Requires: pypi(eventlet)
-Requires: pypi(jsonschema)
-Requires: pypi(keystoneauth1)
-Requires: pypi(oslo.concurrency)
-Requires: pypi(oslo.config)
 Requires: pypi(oslo.i18n)
-Requires: pypi(oslo.serialization)
-Requires: pypi(oslo.utils)
-Requires: pypi(python_keystoneclient)
-Requires: pypi(requests)
-Requires: pypi(six)
+Requires: pypi(oslo.config)
 Requires: pypi(stevedore)
+Requires: pypi(eventlet)
+Requires: pypi(oslo.concurrency)
+Requires: pypi(six)
+Requires: pypi(requests)
+Requires: pypi(jsonschema)
+Requires: pypi(python_keystoneclient)
+Requires: pypi(oslo.serialization)
+Requires: pypi(keystoneauth1)
+Requires: pypi(oslo.utils)
 
 %description python3
 python3 components for the glance_store package.
 
 
 %prep
-%setup -q -n glance_store-1.1.0
-cd %{_builddir}/glance_store-1.1.0
+%setup -q -n glance_store-2.0.0
+cd %{_builddir}/glance_store-2.0.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583535146
+export SOURCE_DATE_EPOCH=1585927385
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -133,7 +148,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/glance_store
-cp %{_builddir}/glance_store-1.1.0/LICENSE %{buildroot}/usr/share/package-licenses/glance_store/294b43b2cec9919063be1a3b49e8722648424779
+cp %{_builddir}/glance_store-2.0.0/LICENSE %{buildroot}/usr/share/package-licenses/glance_store/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

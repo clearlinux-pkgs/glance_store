@@ -1,6 +1,22 @@
 CHANGES
 =======
 
+2.0.0
+-----
+
+* Release note for 1.2.0
+* Add config for cinder mounting needs
+* Refactor methods in cinder store
+* Add S3 store support to glance\_store
+* Fix for BufferedReader sets is\_zero\_size true for a chunk
+* Image upload fails if cinder multipath is enabled
+* Drop support for tempest-full
+* Restore quotes removal for swift config in Python3
+* Drop python 2.7 support and testing
+* Re-use swift\_store\_cacert for Keystone session
+* doc: Clean up unnecessary left vertical lines
+* Imported Translations from Zanata
+
 1.1.0
 -----
 
@@ -11,6 +27,7 @@ CHANGES
 * Update master for stable/train
 * Register reserved store configs
 * Remove warning filter
+* Set zero size only when nothing is written
 
 1.0.0
 -----

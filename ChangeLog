@@ -1,6 +1,25 @@
 CHANGES
 =======
 
+2.1.0
+-----
+
+* Release notes for Victoria Milestone 1
+* Switch to newer openstackdocstheme and reno versions
+* Imported Translations from Zanata
+* Add lock per share for cinder nfs mount/umount
+* Fix: API returns 503 if one of the store is mis-configured
+* Bump default tox env from py37 to py38
+* Add py38 package metadata
+* Bump cinder/os-brick requirements
+* Use unittest.mock instead of third party mock
+* Imported Translations from Zanata
+* Add Python3 victoria unit tests
+* Enforce constraints for docs dependencies
+* Cleanup py27 support
+* Update hacking for Python3
+* Update master for stable/ussuri
+
 2.0.0
 -----
 
